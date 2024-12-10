@@ -1,0 +1,20 @@
+<p style="color: green"><%= notice %></p>
+
+<% content_for :name, "Photos" %>
+
+<h1>Photos</h1>
+
+<div id="photos">
+  <% @photo.each do |photo| %>
+   <% if photo.img.present?%>
+    <%= image_tag photo.img %>
+  <%else%>
+    <p>No Image</p>
+  <%end%>
+    <p>
+      <%= link_to "Show this photo", photo_path(photo.id) %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New photo", new_photo_path %>

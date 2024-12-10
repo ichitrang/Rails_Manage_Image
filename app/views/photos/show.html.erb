@@ -1,0 +1,11 @@
+<p style="color: green"><%= notice %></p>
+
+
+<%# <%= render @photo %> 
+
+<div>
+  <%= link_to "Edit this user", edit_photo_path(@photo) %> |
+  <%= link_to "Back to users", photo_path %>
+
+  <%= link_to "Destroy this user", photo_path(@photo.id), turbo_method: :delete %>
+</div>
